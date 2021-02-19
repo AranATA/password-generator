@@ -82,17 +82,18 @@ generateBtn.addEventListener("click", writePassword);
 
 function writePassword() {
   
-  passLengthStr = prompt("Please enter the number of characters you want for your new password. It must be more than 12 and less than 128.");
+  var passLengthStr = window.prompt("Please enter the number of characters you want for your new password. It must be more than 8 and less than 128.");
   passLength = Number(passLengthStr);
-  if (passLengthStr<12||passLengthStr>128){
+  
+  if (passLengthStr<8||passLengthStr>128){
     return writePassword();
-  } 
+  }
   
   userLower = confirm("Do you want lowercase letters in your password?");
   userUpper = confirm("Do you want uppercase letters in your password?");
   userNumber = confirm("Do you want numbers in your password?");
   userSpecial = confirm("Do you want special characters in your password?");
-  if (userLower === false && userUpper === false && userNumber === false && userSpecial === false) {
+  if (userLower === false && userUpper === false && userNumber === false && userSpecial === false){
     return writePassword();
   }
   
