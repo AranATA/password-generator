@@ -75,6 +75,7 @@ function generatePassword() {
   return finalCharacters;
  }
 
+ 
 generateBtn.addEventListener("click", writePassword);
 
 function writePassword() {
@@ -99,11 +100,17 @@ function writePassword() {
   passwordText.value = finalCharacters;
      
 }
+generateBtn.addEventListener("mouseover", clicknumber);
+var clic = 0;
+function clicknumber() {
+  clic += 1;
+  if (clic === 2){
+    location.reload();
+}
 
-generateBtn.addEventListener("mouseover", location.reload());
 
 
+// generateBtn.addEventListener("mouseover", location.reload());
 
 
- 
-   
+}
